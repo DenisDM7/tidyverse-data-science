@@ -7,8 +7,9 @@ library(tidyverse)
 #✔ tidyr   0.8.0     ✔ stringr 1.3.1
 #✔ readr   1.1.1     ✔ forcats 0.3.0
 
+#------PREGUNTA A RESPONDER DEL ANALISIS---------
 #Los coches con motor más grande consumen más combustible 
-#que los coches con motor más pequeño.
+#que los coches con motor más pequeño.?
 #La relación consumo / tamaño es lineal? Es no lineal? Es exponencial?
 #Es positiva? Es negativa?
 
