@@ -13,8 +13,8 @@ library(tidyverse)
 #La relación consumo / tamaño es lineal? Es no lineal? Es exponencial?
 #Es positiva? Es negativa?
 
-View(mpg)
-?mpg #help(mpg)
+View(mpg)#----sirve para ver los datos completos
+?mpg #-help(mpg)"es equivalente al ?mpg" --------nos da una ayuda sobre el objeto que preguntemos
 # displ: tamaño del motor del coche en litros
 # hwy: número de millas recorridas en autopista por galón de combustible (3.785411784 litros)
 
@@ -35,7 +35,7 @@ ggplot(data = mpg) +
 
 
 
-#Color de los puntos
+#Color de los puntos, dandole color con la columna class que nos dice el tipo de vehiculo ------------aqui se le vio color dependiendo de las variables osea no es global
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, color = class))
 
@@ -53,7 +53,7 @@ ggplot(data = mpg) +
 
 #Elección manual de estéticas
 ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy), color = "red")
+  geom_point(mapping = aes(x = displ, y = hwy), color = "red")#--------aqui se le dio color pero global a todo el grafico sin importar las variables
 # color = nombre del color en formato string
 # size = tamaño del punto en mm
 # shape = forma del punto con números desde el 0 al 25
