@@ -194,8 +194,8 @@ ggplot(data = diamonds) +
 ggplot(data = diamonds)+
   stat_count(mapping = aes(x=cut))
 
-
-demo_diamonds <- tribble(
+#--------- esto es casi lo mismo que lo anterior pero hecho personalmente y se su resultado es ligeramente diferente
+demo_diamonds <- tribble( 
   ~cut,       ~freqs,
   "Fair",       1610,
   "Good",       4906,
@@ -242,17 +242,17 @@ ggplot(data = diamonds, mapping = aes(x = cut, colour = clarity)) +
   geom_bar(fill = NA, position = "identity")
 
 
-## position = "fill"
+## position = "fill"-------hace que la altura de las barras sea iguales y sirve para comparar proporciones entre las variables
 ggplot(data = diamonds, mapping = aes(x = cut, fill = clarity)) + 
   geom_bar(position = "fill")
 
-## position = "dodge"
+## position = "dodge"----------hace que cada grupo tenga una barrita en el diagrama,otra forma de hacer lo anterior 
 ggplot(data = diamonds, mapping = aes(x = cut, fill = clarity)) + 
   geom_bar(position = "dodge")
 
 
 ## Volvemos al scatterplot
-## position = "jitter"
+## position = "jitter"-------hace que salga cada uno de los puntos ya que no salen todos los puntos si no le pasamos este parametro 
 ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
   geom_point( position = "jitter" )
 
