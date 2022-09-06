@@ -81,7 +81,7 @@ ggplot(data = mpg) +
 
 
 ##FACETS
-# facet_wrap(~<FORMULA_VARIABLE>): la variable debe ser discreta
+# facet_wrap(~<FORMULA_VARIABLE>): la variable debe ser discreta-----------------hace un grafico de cada variable
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy)) +
   facet_wrap(~class, nrow = 3)
@@ -90,11 +90,13 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy)) +
   facet_wrap(~displ, nrow = 3)
 
-# facet_grid(<FORMULA_VARIABLE1>~<FORMULA_VARIABLE2>)
+# facet_grid(<FORMULA_VARIABLE1>~<FORMULA_VARIABLE2>)------ hace un grafico de cada clase de dos variables
 ggplot(data = mpg) +
   geom_point(mapping = aes(x=displ, y = hwy)) +
   facet_grid(drv~cyl)
 
+#---------------- es lo mismo que lo anterior pero sin decirle cuantas columna de graficos queremos fijarse que no tiene nrow o esto drv~cy
+  
 ggplot(data = mpg) +
   geom_point(mapping = aes(x=displ, y = hwy)) +
   facet_grid(.~cyl)
